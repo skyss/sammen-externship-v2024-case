@@ -1,12 +1,14 @@
-# Sammen Externship våren 2024
-
+<p align="center">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="./assets/skysslogo-darkmode.svg">
 <source media="(prefers-color-scheme: light)" srcset="./assets/skysslogo-lightmode.svg">
 <img src="./assets/skysslogo-lightmode.svg" width="300" />
 </picture>
+</p>
 
-Velkommen til Skyss! 
+# Sammen Externship våren 2024
+
+Velkommen til Skyss!
 
 Skyss har nettopp startet arbeidet med å etablere en ny dataplattform.
 En del av dette er å utforske potensielle kilder for relevant data.
@@ -31,8 +33,7 @@ Om dere besøker det fra nettleseren kommer dere til en interaktiv GraphQL-klien
 Denne kan brukes til å prøve ut ulike spørringer, og å se dokumentasjon på de ulike typene og spørringene som er tilgjengelige.
 
 Dokumentasjonen er tilgjengelig her: https://trafikkdata.atlas.vegvesen.no/#/om-api.
-Her finnes det også eksempler på praktisk bruk av API-et og eksempler med `curl` og JavaScript. 
-
+Her finnes det også eksempler på praktisk bruk av API-et og eksempler med `curl` og JavaScript.
 
 ### Om GraphQL
 
@@ -42,29 +43,33 @@ Kort fortalt innebærer det at en i stedet for å benytte ulike URL-er for å be
 Med et tradisjonelt REST-API ville en ha sendt en `GET`-request til f.eks. `/pets/{petId}` for å hente informasjon om et kjæledyr.
 Med GraphQL er alle requests en `POST` til samme endepunkt, f.eks. `/graphql`, hvor spørringens body inneholder en GraphQL-spørring som spesifiserer hvilken data vi ønsker å få tilbake.
 Et eksempel på en slik body er
+
 ```graphql
 {
-    pet(petId: 123) {
-        name
-        category {
-            id
-            name
-        }
+  pet(petId: 123) {
+    name
+    category {
+      id
+      name
     }
+  }
 }
 ```
+
 Responsen på en slik spørring kan da se slik ut:
+
 ```json
 {
-    "pet": {
-        "name": "Fido",
-        "category": {
-            "id": 1,
-            "name": "dog"
-        }
+  "pet": {
+    "name": "Fido",
+    "category": {
+      "id": 1,
+      "name": "dog"
     }
+  }
 }
 ```
+
 Igjen, se den [offisielle dokumentasjonen](https://graphql.org/learn/) for mer informasjon.
 
 Det finnes flere GraphQL-klienter en kan velge å benytte med ulike kodespråk.
@@ -77,38 +82,37 @@ Det er lagt noen eksempler i [`api-collection`](./api-collection/).
 
 Gjør følgende for å åpne disse med Bruno:
 
-1. Klon dette repoet lokalt til din maskin:
+1.  Klon dette repoet lokalt til din maskin:
     ```shell
     git clone https://github.com/skyss/sammen-externship-v2024-case.git
     ```
-1. Last ned og installer Bruno fra https://www.usebruno.com/downloads.
-1. Åpne Bruno. Trykk på de tre prikkene øverset til venstre, og velger deretter _Open Collection_.
+1.  Last ned og installer Bruno fra https://www.usebruno.com/downloads.
+1.  Åpne Bruno. Trykk på de tre prikkene øverset til venstre, og velger deretter _Open Collection_.
 
     ![Open Collection](./assets/bruno-open-collection.png)
 
-1. Velg mappen _api-collection_ i dette repoet og trykk OK.
+1.  Velg mappen _api-collection_ i dette repoet og trykk OK.
 
     ![Open Collection folder](./assets/bruno-folder-select.png)
 
-1. Statens Vegvesen burde nå være synlig i panelet til venstre.
-Trykk på overskriften for å velge en av spørringene.
-Før den kjøres må en velge et miljø _(environment)_ som inneholder variablene en trenger. I dette tilfellet trenger du miljøet _Prod_ som inneholder variabelen  `baseUrl`. Det velges oppe i høyre hjørne:
+1.  Statens Vegvesen burde nå være synlig i panelet til venstre.
+    Trykk på overskriften for å velge en av spørringene.
+    Før den kjøres må en velge et miljø _(environment)_ som inneholder variablene en trenger. I dette tilfellet trenger du miljøet _Prod_ som inneholder variabelen `baseUrl`. Det velges oppe i høyre hjørne:
 
-    ![Select Environment](./assets/bruno-select-environment.png)
+        ![Select Environment](./assets/bruno-select-environment.png)
 
-1. Nå er Bruno klart til å gjøre en spørring. Bruk hurtigtasten som vises i vinduet eller trykk på pilen til høyre i adressefeltet.
-Svaret blir synlig i panelet til høyre:
+1.  Nå er Bruno klart til å gjøre en spørring. Bruk hurtigtasten som vises i vinduet eller trykk på pilen til høyre i adressefeltet.
+    Svaret blir synlig i panelet til høyre:
 
-    ![Areas response](./assets/bruno-request-sent.png)
+        ![Areas response](./assets/bruno-request-sent.png)
 
-1. Når dere skal i gang med å skrive egne spørringer er det veldig nyttig å ha importert GraphQL-skjemaet (_schema_) inn i Bruno. Dette gjøres ved å trykke på _Schema_:
+1.  Når dere skal i gang med å skrive egne spørringer er det veldig nyttig å ha importert GraphQL-skjemaet (_schema_) inn i Bruno. Dette gjøres ved å trykke på _Schema_:
 
     ![Schema button](./assets/bruno-schema-button.png)
 
     Dette gjør at _Docs_-knappen som er rett ved siden av _Schema_ fungerer og gir informasjon om de ulike spørringene som er tilgjengelig. En kan også trykke på et felt i spørringen mens en holder inne <kbd>Ctrl</kbd> (Windows/Linux) eller <kbd>⌘</kbd> (Mac) for å få opp dokumentasjonen for det feltet.
 
     ![Areas docs](./assets/bruno-areas-docs.png)
-
 
 ## Forventninger
 
