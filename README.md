@@ -99,12 +99,12 @@ Gjør følgende for å åpne disse med Bruno:
     Trykk på overskriften for å velge en av spørringene.
     Før den kjøres må en velge et miljø _(environment)_ som inneholder variablene en trenger. I dette tilfellet trenger du miljøet _Prod_ som inneholder variabelen `baseUrl`. Det velges oppe i høyre hjørne:
 
-        ![Select Environment](./assets/bruno-select-environment.png)
+    ![Select Environment](./assets/bruno-select-environment.png)
 
 1.  Nå er Bruno klart til å gjøre en spørring. Bruk hurtigtasten som vises i vinduet eller trykk på pilen til høyre i adressefeltet.
     Svaret blir synlig i panelet til høyre:
 
-        ![Areas response](./assets/bruno-request-sent.png)
+    ![Areas response](./assets/bruno-request-sent.png)
 
 1.  Når dere skal i gang med å skrive egne spørringer er det veldig nyttig å ha importert GraphQL-skjemaet (_schema_) inn i Bruno. Dette gjøres ved å trykke på _Schema_:
 
