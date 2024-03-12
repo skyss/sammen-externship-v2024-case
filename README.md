@@ -66,6 +66,46 @@ Igjen, se den [offisielle dokumentasjonen](https://graphql.org/learn/) for mer i
 Det finnes flere GraphQL-klienter en kan velge å benytte med ulike kodespråk.
 Se f.eks. [GQL](https://github.com/graphql-python/gql) for Python og [Apollo Client](https://www.apollographql.com/docs/react/) for Javascript. Å bruke en klient er selvfølgelig valgfritt.
 
+### Bruno
+
+For å komme raskt i gang med å teste ut API-et lokalt på din maskin kan du bruke [API-klienten Bruno](https://www.usebruno.com/).
+Det er lagt noen eksempler i [`api-collection`](./api-collection/).
+
+Gjør følgende for å åpne disse med Bruno:
+
+1. Klon dette repoet lokalt til din maskin:
+    ```shell
+    git clone https://github.com/skyss/sammen-externship-v2024-case.git
+    ```
+1. Last ned og installer Bruno fra https://www.usebruno.com/downloads.
+1. Åpne Bruno. Trykk på de tre prikkene øverset til venstre, og velger deretter _Open Collection_.
+
+    ![Open Collection](./assets/bruno-open-collection.png)
+
+1. Velg mappen _api-collection_ i dette repoet og trykk OK.
+
+    ![Open Collection folder](./assets/bruno-folder-select.png)
+
+1. Statens Vegvesen burde nå være synlig i panelet til venstre.
+Trykk på overskriften for å velge en av spørringene.
+Før den kjøres må en velge et miljø _(environment)_ som inneholder variablene en trenger. I dette tilfellet trenger du miljøet _Prod_ som inneholder variabelen  `baseUrl`. Det velges oppe i høyre hjørne:
+
+    ![Select Environment](./assets/bruno-select-environment.png)
+
+1. Nå er Bruno klart til å gjøre en spørring. Bruk hurtigtasten som vises i vinduet eller trykk på pilen til høyre i adressefeltet.
+Svaret blir synlig i panelet til høyre:
+
+    ![Areas response](./assets/bruno-request-sent.png)
+
+1. Når dere skal i gang med å skrive egne spørringer er det veldig nyttig å ha importert GraphQL-skjemaet (_schema_) inn i Bruno. Dette gjøres ved å trykke på _Schema_:
+
+    ![Schema button](./assets/bruno-schema-button.png)
+
+    Dette gjør at _Docs_-knappen som er rett ved siden av _Schema_ fungerer og gir informasjon om de ulike spørringene som er tilgjengelig. En kan også trykke på et felt i spørringen mens en holder inne <kbd>Ctrl</kbd> (Windows/Linux) eller <kbd>⌘</kbd> (Mac) for å få opp dokumentasjonen for det feltet.
+
+    ![Areas docs](./assets/bruno-areas-docs.png)
+
+
 ## Forventninger
 
 Igjen, dette er en helt åpen oppgave.
