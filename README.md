@@ -1,6 +1,10 @@
 # Sammen Externship våren 2024
 
-<img src="./assets/skysslogo.svg" width="300" />
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="./assets/skysslogo-darkmode.svg">
+<source media="(prefers-color-scheme: light)" srcset="./assets/skysslogo-lightmode.svg">
+<img src="./assets/skysslogo-lightmode.svg" width="300" />
+</picture>
 
 Velkommen til Skyss! 
 
